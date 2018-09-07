@@ -1,1 +1,6 @@
-<?php header( 'Location: /index.html' ) ;  ?>
+<!DOCTYPE html>
+<html>
+    <body>
+        <?php header( 'Location: /index.html' ) ;  ?>
+    </body>
+</html>
