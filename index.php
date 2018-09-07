@@ -1,6 +1,1 @@
-<!DOCTYPE html>
-<html>
-    <body>
-        <?php header( 'Location: /index.html' ) ;  ?>
-    </body>
-</html>
+<?php include_once("home.html"); ?>
