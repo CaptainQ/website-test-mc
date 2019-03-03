@@ -3,6 +3,16 @@
     <head>
         <title>TEST TEST</title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        
+        <script>
+            $(document).load(function(){
+                alert($(".subscribed-label").css("visibility"));
+                if ($(".subscribed-label").is(":visible"))
+                    $("#checkSub").append(" <b>Thank you for subscribing to La Potato</b>.");
+                else
+                    $("#checkSub").append(" <b>Please subscribe to La Potato</b>.");
+            });
+        </script>
     </head>
     
     <body>
@@ -15,15 +25,5 @@
         <div class="g-ytsubscribe" data-channelid="UC7CtJrRNMYw2O_9kKr5tmCA" data-layout="full" data-count="hidden"></div>
         <br>
         <p id="checkSub"></p>
-        
-        <script>
-            $(document).load(function(){
-                alert($(".subscribed-label").css("visibility"));
-                if ($(".subscribed-label").is(":visible"))
-                    $("#checkSub").append(" <b>Thank you for subscribing to La Potato</b>.");
-                else
-                    $("#checkSub").append(" <b>Please subscribe to La Potato</b>.");
-            });
-        </script>
     </body>
 </html>
