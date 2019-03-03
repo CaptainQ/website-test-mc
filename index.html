@@ -5,11 +5,11 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script>
             $(document).ready(function(){
-                alert("subscribed-label = " + $(".subscribed-label").css("visibility"));
+                alert($(".subscribed-label").css("visibility"));
                 if ($(".subscribed-label").is(":visible"))
-                    $("#checkSub").append("subscribed-label = " + $(".subscribed-label").css("visibility"));
+                    $("#checkSub").append(" <b>Thank you for subscribing to La Potato</b>.");
                 else
-                    $("#checkSub").append("subscribed-label = " + $(".subscribed-label").css("visibility");
+                    $("#checkSub").append(" <b>Please subscribe to La Potato</b>.");
             });
         </script>
     </head>
