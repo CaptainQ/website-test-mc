@@ -6,14 +6,7 @@
         
         <script>
             $(window).on('load', function() {
-                alert($('.yt-uix-button').dataset.isSubscribed);
-                
-                if ($('.yt-uix-button-subscribe-branded').length) {
-                    $("#checkSub").append(" <b>Please subscribe to La Potato</b>.");
-                }
-                else {
-                    $("#checkSub").append(" <b>Thank you for subscribing to La Potato</b>.");
-                }
+                Alert(document.getElementsByClassName("yt-uix-button-subscribed-branded").dataset.isSubscribed);
             });
         </script>
     </head>
@@ -31,3 +24,4 @@
         <p id="checkSub"></p>
     </body>
 </html>
+button.yt-uix-button.yt-uix-button-size-default.yt-uix-button-subscribed-branded.yt-uix-button-has-icon.no-icon-markup.yt-uix-subscription-button.yt-can-buffer.hover-enabled.external.fixed-width
