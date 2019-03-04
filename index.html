@@ -5,7 +5,12 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         
         <script>
-            $(".subscribe-label").on('load', function() {
+            $(window).on('load', function() {
+                setTimeout(
+                    function() {
+                    //do something special
+                }, 5000);
+                
                 alert($(".subscribe-label").css("height"));
                 if ($('.subscribe-label').css('visibility') === 'hidden')
                     $("#checkSub").append(" <b>Thank you for subscribing to La Potato</b>.");
