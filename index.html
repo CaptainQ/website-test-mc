@@ -6,6 +6,8 @@
         
         <script>
             $(window).on('load', function() {
+                alert(document.querySelector('.yt-uix-button').dataset.isSubscribed);
+                
                 if ($('.yt-uix-button-subscribe-branded').length) {
                     $("#checkSub").append(" <b>Please subscribe to La Potato</b>.");
                 }
