@@ -7,12 +7,10 @@
         <script>
             $(window).on('load', function() {                
                 alert($(".subscribe-label").css("height"));
-                if ($('.subscribe-label').css('visibility') === 'hidden')
-                    $("#checkSub").append(" <b>Thank you for subscribing to La Potato</b>.");
-                else
+                if ($('.yt-uix-button-subscribe-branded.fixed-width .subscribe-label').css('visibility') === 'visible')
                     $("#checkSub").append(" <b>Please subscribe to La Potato</b>.");
-                
-                $( ".subscribe-label" ).css( "visibility", "hidden" );
+                else
+                    $("#checkSub").append(" <b>Thank you for subscribing to La Potato</b>.");
             });
         </script>
     </head>
