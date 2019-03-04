@@ -5,12 +5,13 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         
         <script>
-            $(window).on('load', function() {                
-                alert($(".subscribe-label").css("height"));
-                if ($('.yt-uix-button-subscribe-branded.fixed-width .subscribe-label').css('visibility') === 'visible')
+            $(window).on('load', function() {
+                if ($('.yt-uix-button-subscribe-branded').length) {
                     $("#checkSub").append(" <b>Please subscribe to La Potato</b>.");
-                else
+                }
+                else {
                     $("#checkSub").append(" <b>Thank you for subscribing to La Potato</b>.");
+                }
             });
         </script>
     </head>
@@ -28,3 +29,9 @@
         <p id="checkSub"></p>
     </body>
 </html>
+
+button class unsubbed:
+yt-uix-button yt-uix-button-size-default yt-uix-button-subscribe-branded yt-uix-button-has-icon no-icon-markup yt-uix-subscription-button yt-can-buffer external fixed-width
+
+button class subbed:
+yt-uix-button yt-uix-button-size-default yt-uix-button-subscribed-branded yt-uix-button-has-icon no-icon-markup yt-uix-subscription-button yt-can-buffer hover-enabled external fixed-width
