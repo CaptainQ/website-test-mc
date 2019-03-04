@@ -7,7 +7,9 @@
         <script>
             $(window).on('load', function() {
                 alert("Test");
-                alert("are they subscribed? " + document.getElementsByClassName("yt-uix-button-subscribed-branded").dataset.isSubscribed);
+                var x = document.getElementsByClassName("yt-uix-button-subscribed-branded");
+                var sub = x.dataset.isSubscribed;
+                alert("are they subscribed? " + sub);
             });
         </script>
     </head>
