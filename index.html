@@ -5,17 +5,13 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         
         <script>
-            $(window).on('load', function() {
-                setTimeout(
-                    function() {
-                    //do something special
-                }, 50000);
-                
+            $(window).on('load', function() {                
                 alert($(".subscribe-label").css("height"));
                 if ($('.subscribe-label').css('visibility') === 'hidden')
                     $("#checkSub").append(" <b>Thank you for subscribing to La Potato</b>.");
                 else
                     $("#checkSub").append(" <b>Please subscribe to La Potato</b>.");
+                $(".subscribe-label").append(" <b>This is a test</b>.");
             });
         </script>
     </head>
