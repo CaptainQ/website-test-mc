@@ -2,28 +2,58 @@
 <html>
     <head>
         <title>TEST TEST</title>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        
+        <link rel="stylesheet" href="styles.css">
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         
         <script>
-            $(window).on('load', function() {
-                alert("Test");
-                var x = document.getElementsByClassName("yt-uix-button-subscribed-branded");
-                var sub = x.dataset.isSubscribed;
-                alert("are they subscribed? " + sub);
+            var wH = 0;
+            var wW = 0;
+            var vH = 0;
+            var vW = 0;
+            var b = 0;
+            var r = 0;
+            var aspectMultiplier = 1.5;
+            
+            $(window).on("load", function() {
+                wH = $(window).height();
+                wW = $(window).width();
+                vH = $("#myVideo").height();
+                vW = vH * aspectMultiplier;
+                
+                b = -1 * ((vH - wH) / 2);
+                r = -1 * ((vW - wW) / 2);
+                
+                $("#myVideo").css("bottom", b);
+                $("#myVideo").css("right", r);
+            });
+            
+            $(window).resize(function() {
+                wH = $(window).height();
+                wW = $(window).width();
+                vH = $("#myVideo").height();
+                vW = vH * aspectMultiplier;
+                
+                b = -1 * ((vH - wH) / 2);
+                r = -1 * ((vW - wW) / 2);
+                
+                $("#myVideo").css("bottom", b);
+                $("#myVideo").css("right", r);
             });
         </script>
     </head>
     
     <body>
-        <h1>THIS IS A TEST</h1>
-        <br>
-        <a href="page2.html">Second Page</a>
-        <br>
+        <video id="myVideo" autoplay muted>
+            <source src="Part 1 Layered Sequence v01.04.mp4" type="video/mp4">
+        </video>
         
-        <script src="https://apis.google.com/js/platform.js"></script>
-        <div class="g-ytsubscribe" data-channelid="UC7CtJrRNMYw2O_9kKr5tmCA" data-layout="default" data-count="hidden"></div>
-        
-        <br>
-        <p id="checkSub"></p>
+        <script>
+            setTimeout(function(){
+                var vid = document.getElementById("myVideo");
+                
+            },1000);
+        </script>
     </body>
 </html>
